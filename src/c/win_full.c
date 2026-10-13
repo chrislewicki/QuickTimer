@@ -191,16 +191,17 @@ static void prv_touch(const TouchEvent *e) {
       int target = prv_hit(p);
       touch_track_begin(&s_track, e, target);
       s_drag_field = -1;
-      if (target >= TGT_FIELD0 && target < TGT_FIELD0 + 3) {
-        s_focus = target - TGT_FIELD0;
+      if (target == TGT_START) {
+        s_start_pressed = true;
+      } else {
+        /* Any vertical swipe on the screen adjusts the focused field.
+           We intentionally do not change the focus here: tapping a field
+           (handled at liftoff) is the only thing that switches fields. */
         s_drag_field = s_focus;
         s_drag_start_y = p.y;
         s_drag_start_val = s_val[s_focus];
-        prv_redraw();
-      } else if (target == TGT_START) {
-        s_start_pressed = true;
-        prv_redraw();
       }
+      prv_redraw();
       break;
     }
     case TouchEvent_PositionUpdate:
@@ -237,6 +238,9 @@ static void prv_touch(const TouchEvent *e) {
       } else if (target >= TGT_DOWN0 && target < TGT_DOWN0 + 3) {
         s_focus = target - TGT_DOWN0;
         prv_step(s_focus, -1);
+      } else if (target >= TGT_FIELD0 && target < TGT_FIELD0 + 3) {
+        s_focus = target - TGT_FIELD0;   /* tapping a field switches focus */
+        prv_redraw();
       } else if (target == TGT_START) {
         prv_start();
       }

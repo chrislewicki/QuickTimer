@@ -32,7 +32,7 @@
     "name": "Quick Timer",
     "shortName": "Quick Timer",
     "longName": "Quick Timer",
-    "versionLabel": "1.0.0",
+    "versionLabel": "1.0.1",
     "companyName": "Chris Lewicki",
     "appKeys": {
         "ExitAfterStart": 10024

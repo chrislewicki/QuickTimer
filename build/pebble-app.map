@@ -2347,7 +2347,7 @@ LOAD /Users/chris/Library/Application Support/Pebble SDK/SDKs/4.33.1/toolchain/a
  .comment       0x00000038       0x39 /Users/chris/Library/Application Support/Pebble SDK/SDKs/4.33.1/toolchain/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(libc_a-errno.o)
  .comment       0x00000038       0x39 /Users/chris/Library/Application Support/Pebble SDK/SDKs/4.33.1/toolchain/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp/crtend.o
 
-.debug_info     0x00000000     0x8aa4
+.debug_info     0x00000000     0x8aa8
  .debug_info    0x00000000      0xf8b src/c/engine.c.49.o
  .debug_info    0x00000f8b      0x4b5 src/c/format.c.49.o
  .debug_info    0x00001440      0xae8 src/c/main.c.49.o
@@ -2356,11 +2356,11 @@ LOAD /Users/chris/Library/Application Support/Pebble SDK/SDKs/4.33.1/toolchain/a
  .debug_info    0x00002acb     0x1547 src/c/ui.c.49.o
  .debug_info    0x00004012      0xfb8 src/c/win_alert.c.49.o
  .debug_info    0x00004fca     0x12b1 src/c/win_fast.c.49.o
- .debug_info    0x0000627b     0x1406 src/c/win_full.c.49.o
- .debug_info    0x00007681      0xfa9 src/c/win_running.c.49.o
- .debug_info    0x0000862a      0x33e basalt/appinfo.auto.c.49.o
- .debug_info    0x00008968       0x8f basalt/src/resource_ids.auto.c.49.o
- .debug_info    0x000089f7       0xad src/message_keys.auto.c.49.o
+ .debug_info    0x0000627b     0x140a src/c/win_full.c.49.o
+ .debug_info    0x00007685      0xfa9 src/c/win_running.c.49.o
+ .debug_info    0x0000862e      0x33e basalt/appinfo.auto.c.49.o
+ .debug_info    0x0000896c       0x8f basalt/src/resource_ids.auto.c.49.o
+ .debug_info    0x000089fb       0xad src/message_keys.auto.c.49.o
 
 .debug_abbrev   0x00000000     0x2618
  .debug_abbrev  0x00000000      0x487 src/c/engine.c.49.o

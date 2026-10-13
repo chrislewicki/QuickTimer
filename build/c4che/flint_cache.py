@@ -47,7 +47,7 @@ PEBBLE_SDK_ROOT = '/Users/chris/Library/Application Support/Pebble SDK/SDKs/curr
 PLATFORM = {'NAME': 'flint', 'MAX_APP_BINARY_SIZE': 65536, 'MAX_APP_MEMORY_SIZE': 65536, 'MAX_WORKER_MEMORY_SIZE': 10240, 'MAX_RESOURCES_SIZE_APPSTORE': 262144, 'MAX_RESOURCES_SIZE': 1048576, 'DEFINES': ['PBL_PLATFORM_FLINT', 'PBL_BW', 'PBL_RECT', 'PBL_MICROPHONE', 'PBL_HEALTH', 'PBL_COMPASS', 'PBL_SPEAKER', 'PBL_DISPLAY_WIDTH=144', 'PBL_DISPLAY_HEIGHT=168'], 'BUILD_DIR': 'flint', 'BUNDLE_BIN_DIR': 'flint', 'ADDITIONAL_TEXT_LINES_FOR_PEBBLE_H': [], 'MAX_FONT_GLYPH_SIZE': 256, 'TAGS': ['flint', 'bw', 'rect', 'mic', 'health', 'compass', 'speaker', '144w', '168h']}
 PLATFORM_NAME = 'flint'
 PREFIX = '/usr/local'
-PROJECT_INFO = {'displayName': 'Quick Timer', 'uuid': '3c6e34f4-d482-4327-bd24-f039abbe66c4', 'sdkVersion': '3', 'enableMultiJS': True, 'targetPlatforms': ['basalt', 'chalk', 'diorite', 'emery', 'flint', 'gabbro'], 'capabilities': ['configurable'], 'messageKeys': {'PresetValue': 10000, 'PresetUnit': 10012, 'ExitAfterStart': 10024}, 'resources': {'media': [{'type': 'bitmap', 'name': 'IMAGE_MENU_ICON', 'file': 'images/icon_menu.png', 'menuIcon': True}]}, 'name': 'Quick Timer', 'shortName': 'Quick Timer', 'longName': 'Quick Timer', 'versionLabel': '1.0.0', 'companyName': 'Chris Lewicki', 'appKeys': {'PresetValue': 10000, 'PresetUnit': 10012, 'ExitAfterStart': 10024}}
+PROJECT_INFO = {'displayName': 'Quick Timer', 'uuid': '3c6e34f4-d482-4327-bd24-f039abbe66c4', 'sdkVersion': '3', 'enableMultiJS': True, 'targetPlatforms': ['basalt', 'chalk', 'diorite', 'emery', 'flint', 'gabbro'], 'capabilities': ['configurable'], 'messageKeys': {'PresetValue': 10000, 'PresetUnit': 10012, 'ExitAfterStart': 10024}, 'resources': {'media': [{'type': 'bitmap', 'name': 'IMAGE_MENU_ICON', 'file': 'images/icon_menu.png', 'menuIcon': True}]}, 'name': 'Quick Timer', 'shortName': 'Quick Timer', 'longName': 'Quick Timer', 'versionLabel': '1.0.1', 'companyName': 'Chris Lewicki', 'appKeys': {'PresetValue': 10000, 'PresetUnit': 10012, 'ExitAfterStart': 10024}}
 REQUESTED_PLATFORMS = ['basalt', 'chalk', 'diorite', 'emery', 'flint', 'gabbro']
 RESOURCES_JSON = [{'type': 'bitmap', 'name': 'IMAGE_MENU_ICON', 'file': 'images/icon_menu.png', 'menuIcon': True}]
 RPATH_ST = '-Wl,-rpath,%s'
@@ -62,7 +62,7 @@ STLIB_MARKER = None
 STLIB_ST = '-l%s'
 SUPPORTED_PLATFORMS = ['basalt', 'aplite', 'diorite', 'chalk', 'flint', 'emery', 'gabbro']
 TARGET_PLATFORMS = ['gabbro', 'flint', 'emery', 'diorite', 'chalk', 'basalt']
-TIMESTAMP = 1791779482
+TIMESTAMP = 1791863917
 USE_GROUPS = True
 VERBOSE = 0
 WEBPACK = ['/Users/chris/Library/Application Support/Pebble SDK/SDKs/current/node_modules/.bin/webpack']
