@@ -22,8 +22,10 @@ static GRect s_field[3];
 static GRect s_box[3];
 static GFont s_digits;      /* largest digit font whose row fits the screen */
 static GRect s_unit[3];
-static GRect s_up_zone[3];
-static GRect s_down_zone[3];
+static GRect s_up_zone[3];     /* where the up-arrow glyph is drawn */
+static GRect s_down_zone[3];   /* where the down-arrow glyph is drawn */
+static GRect s_up_hit[3];      /* enlarged touch area for the up arrow */
+static GRect s_down_hit[3];    /* enlarged touch area for the down arrow */
 static GRect s_colon[2];
 static GPoint s_btn_c;
 static int16_t s_btn_r;
@@ -169,8 +171,8 @@ static void prv_click_config(void *ctx) {
 #if defined(PBL_TOUCH)
 static int prv_hit(GPoint p) {
   for (int i = 0; i < 3; i++) {
-    if (ui_point_in_rect(p, s_up_zone[i])) return TGT_UP0 + i;
-    if (ui_point_in_rect(p, s_down_zone[i])) return TGT_DOWN0 + i;
+    if (ui_point_in_rect(p, s_up_hit[i])) return TGT_UP0 + i;
+    if (ui_point_in_rect(p, s_down_hit[i])) return TGT_DOWN0 + i;
     GRect fu = GRect(s_field[i].origin.x, s_field[i].origin.y,
                      s_field[i].size.w, s_field[i].size.h + s_unit[i].size.h);
     if (ui_point_in_rect(p, fu)) return TGT_FIELD0 + i;
@@ -319,8 +321,14 @@ static void prv_load(Window *window) {
     s_field[i] = GRect(fx, row_y, field_w, field_h);
     s_box[i] = GRect(fx, row_y + box_pad, field_w, field_h - box_pad);
     s_unit[i] = GRect(fx, row_y + field_h, field_w, unit_h);
+    /* Arrow glyph rects (small, exactly where they look right) drive the drawing. */
     s_up_zone[i] = GRect(fx, block_y + box_pad, field_w, s_arrow_h + 4);
     s_down_zone[i] = GRect(fx, row_y + field_h + unit_h, field_w, s_arrow_h + 4);
+    /* Enlarged touch targets (~doubled, extended away from the field) make the
+       small arrows easier to hit precisely. Used for hit-testing only, never drawn. */
+    int16_t arrow_band = s_arrow_h + 4;
+    s_up_hit[i] = GRect(fx, block_y + box_pad - arrow_band, field_w, 2 * arrow_band);
+    s_down_hit[i] = GRect(fx, row_y + field_h + unit_h, field_w, 2 * arrow_band);
     if (i < 2) {
       s_colon[i] = GRect(fx + field_w, row_y, colon_w, field_h);
     }
