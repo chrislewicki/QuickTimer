@@ -1,0 +1,40 @@
+{
+    "displayName": "Quick Timer",
+    "uuid": "3c6e34f4-d482-4327-bd24-f039abbe66c4",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+    ],
+    "capabilities": [
+        "configurable"
+    ],
+    "messageKeys": {
+        "PresetValue": 10000,
+        "PresetUnit": 10012,
+        "ExitAfterStart": 10024
+    },
+    "resources": {
+        "media": [
+            {
+                "type": "bitmap",
+                "name": "IMAGE_MENU_ICON",
+                "file": "images/icon_menu.png",
+                "menuIcon": true
+            }
+        ]
+    },
+    "name": "Quick Timer",
+    "shortName": "Quick Timer",
+    "longName": "Quick Timer",
+    "versionLabel": "1.0.0",
+    "companyName": "Chris Lewicki",
+    "appKeys": {
+        "ExitAfterStart": 10024
+    }
+}
